@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # -*- coding: utf-8 -*-
 """
 Baseline experiment: plain TN (no feature map), leaves see [x_i, 1] only.
@@ -24,7 +25,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # ---- import your TN core ----
-from tntree_model import BinaryTensorTree  # leaves phys_dim=2 with bias handled inside
+from src.tntree_model import BinaryTensorTree  # leaves phys_dim=2 with bias handled inside
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

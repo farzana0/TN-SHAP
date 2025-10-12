@@ -85,6 +85,18 @@ with torch.no_grad():
 
 ## Running Experiments
 
+### Activate Environment First
+
+```bash
+# Activate the conda environment
+conda activate tnshap
+
+# Or if using pip/venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate     # Windows
+```
+
 ### 1. Diabetes Dataset Experiment
 
 ```bash

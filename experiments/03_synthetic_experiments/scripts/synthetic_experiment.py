@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Fixed synthetic experiments with correct Shapley formulation.
 """
@@ -14,7 +15,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Union
 from sklearn.metrics import r2_score
 
-from tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
+from src.tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
 
 class SyntheticMultilinearGenerator:
     """Generate synthetic multilinear functions with controlled interactions."""

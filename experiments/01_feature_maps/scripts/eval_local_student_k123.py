@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # -*- coding: utf-8 -*-
 """
 Evaluate TN selector (FewEval/Vandermonde) vs Teacher Exact (interventional, zero baseline)
@@ -30,7 +31,7 @@ import platform
 import subprocess
 import socket
 # add near top with other imports
-from feature_mapped_tn import FeatureMappedTN  # zero-preserving ψ wrapper
+from src.feature_mapped_tn import FeatureMappedTN  # zero-preserving ψ wrapper
 
 
 
@@ -210,7 +211,7 @@ def _load_teacher(tea_path: str, d_hint: int) -> nn.Module:
     return model.to(DEVICE).eval()
 
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
 except Exception:
     BinaryTensorTree = None
 

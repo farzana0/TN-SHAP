@@ -30,8 +30,19 @@ pip install -e .
 pip install -r requirements.txt
 ```
 
-### Method 2: conda
+### Method 2: conda (Recommended)
 
+#### Quick Setup
+```bash
+# Clone the repository
+git clone https://github.com/your-org/tnshap.git
+cd tnshap
+
+# Run automated setup script
+./setup_conda.sh
+```
+
+#### Manual Setup
 ```bash
 # Clone the repository
 git clone https://github.com/your-org/tnshap.git
@@ -43,6 +54,21 @@ conda activate tnshap
 
 # Install in development mode
 pip install -e .
+```
+
+#### Verify Installation
+```bash
+# Activate environment
+conda activate tnshap
+
+# Test imports
+python -c "
+import torch
+from src import BinaryTensorTree, FeatureMappedTN
+print('✅ Installation successful!')
+print(f'PyTorch version: {torch.__version__}')
+print(f'CUDA available: {torch.cuda.is_available()}')
+"
 ```
 
 ### Method 3: Docker

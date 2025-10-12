@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Comprehensive TN-Shapley Example: Synthetic Data with Strong Pairwise Interactions
 
@@ -39,8 +40,6 @@ from tqdm import tqdm
 
 # Add paths for TN imports
 import sys
-sys.path.append('/home/mila/f/farzaneh.heidari/scratch/tnils/tnexplain/adaptive_tn')
-sys.path.append('/home/mila/f/farzaneh.heidari/scratch/tenis/TN_shapley')
 
 try:
     from tensornetwork import TN, set_seed
@@ -52,7 +51,7 @@ except ImportError as e:
     print(f"❌ TensorNetwork import failed: {e}")
 
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
     TNTREE_AVAILABLE = True
     print("✅ BinaryTensorTree imported successfully")
 except ImportError as e:

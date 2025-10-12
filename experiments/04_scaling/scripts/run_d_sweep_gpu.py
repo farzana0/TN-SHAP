@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # run_d_sweep_gpu.py
 import argparse
 import json
@@ -12,7 +13,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from tntree_model import BinaryTensorTree
+from src.tntree_model import BinaryTensorTree
 from tn_shap_batched import tn_shap_batched
 
 # ---------------- Config ---------------- #

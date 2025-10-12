@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # -*- coding: utf-8 -*-
 # (Shortened header: same as before; only important diffs highlighted below)
 
@@ -90,12 +91,12 @@ def load_gt_from_root(gt_root: str):
 # ----- TN + wrapper -----
 
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
 except Exception:
     BinaryTensorTree = None
 
 try:
-    from feature_mapped_tn import FeatureMappedTN
+    from src.feature_mapped_tn import FeatureMappedTN
 except Exception:
     FeatureMappedTN = None
 

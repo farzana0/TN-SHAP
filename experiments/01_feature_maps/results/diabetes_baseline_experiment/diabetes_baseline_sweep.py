@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Baseline Sweep Experiment on Pre-trained Diabetes Models
 
@@ -25,16 +26,14 @@ from sklearn.preprocessing import StandardScaler
 
 # Load existing models and data loading functions
 import sys
-sys.path.append('/home/mila/f/farzaneh.heidari/scratch/tenis')
-sys.path.append('/home/mila/f/farzaneh.heidari/scratch/tenis/feature_map')
 
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
 except ImportError:
     BinaryTensorTree = None
 
 try:
-    from feature_mapped_tn import FeatureMappedTN
+    from src.feature_mapped_tn import FeatureMappedTN
 except ImportError:
     FeatureMappedTN = None
 

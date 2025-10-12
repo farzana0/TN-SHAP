@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Teacher-Student rank sweep experiment with TNShap Shapley calculations.
 
@@ -23,7 +24,7 @@ import json
 import time
 from typing import Dict, List, Tuple, Optional
 from sklearn.metrics import r2_score
-from tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
+from src.tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
 
 class TensorTreeTeacher:
     """Teacher using tensor tree with specified rank."""

@@ -42,6 +42,24 @@ tenis-clean/
 
 ### Installation
 
+#### Option 1: Conda (Recommended)
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/tnshap.git
+cd tnshap
+
+# Quick setup with conda
+./setup_conda.sh
+
+# Or manually:
+conda env create -f environment.yml
+conda activate tnshap
+pip install -e .
+```
+
+#### Option 2: pip
+
 ```bash
 # Clone the repository
 git clone https://github.com/your-org/tnshap.git
@@ -49,10 +67,7 @@ cd tnshap
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Or use conda
-conda env create -f environment.yml
-conda activate tnshap
+pip install -e .
 ```
 
 ### Basic Usage

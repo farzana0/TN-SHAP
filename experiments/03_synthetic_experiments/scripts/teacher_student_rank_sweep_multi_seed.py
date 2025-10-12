@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Teacher-Student Rank Sweep (TNShap, FIXED)
 - Correct thin-diagonal selectors for order-1 and higher orders
@@ -18,7 +19,7 @@ import time
 import pandas as pd
 from typing import Dict, List, Tuple, Optional
 from sklearn.metrics import r2_score
-from tntree_model import make_balanced_binary_tensor_tree  # assumes available
+from src.tntree_model import make_balanced_binary_tensor_tree  # assumes available
 
 
 # ----------------------------

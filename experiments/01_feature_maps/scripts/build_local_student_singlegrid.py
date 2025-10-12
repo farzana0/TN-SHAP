@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # -*- coding: utf-8 -*-
 """
 End-to-end: build a single-grid FewEval masked dataset (k=1,2,3), train teacher,
@@ -29,8 +30,8 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from tntree_model import BinaryTensorTree
-from feature_mapped_tn import FeatureMappedTN
+from src.tntree_model import BinaryTensorTree
+from src.feature_mapped_tn import FeatureMappedTN
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -195,7 +196,7 @@ def generate_masked_dataset_single_grid(Xtargets: np.ndarray,
 
 # ----- TN student -----
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
 except Exception:
     BinaryTensorTree = None
 

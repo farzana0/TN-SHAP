@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Focused multilinear Shapley experiment with three scenarios:
 1. Low-rank multilinear ground truth from tensor tree
@@ -13,7 +14,7 @@ import itertools
 import math
 from typing import Dict, List, Tuple, Optional
 from sklearn.metrics import r2_score
-from tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
+from src.tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
 
 class TensorTreeGenerator:
     """Generate ground truth multilinear functions from tensor trees."""

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # -*- coding: utf-8 -*-
 
 """
@@ -32,7 +33,7 @@ import torch
 import torch.nn as nn
 from sklearn.metrics import r2_score
 
-from tntree_model import make_balanced_binary_tensor_tree
+from src.tntree_model import make_balanced_binary_tensor_tree
 
 
 # -------------------------- utils: reproducibility -------------------------- #

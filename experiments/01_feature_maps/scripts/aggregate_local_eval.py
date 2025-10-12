@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 # aggregate_local_eval.py
 """
 Aggregate per-target CSVs produced by evaluate_local_selector.py and compute

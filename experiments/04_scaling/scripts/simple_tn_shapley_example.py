@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 """
 Simple TN-Shapley Example with d=100 and Strong Pairwise Interactions
 
@@ -22,10 +23,9 @@ import matplotlib.pyplot as plt
 import sys
 
 # Add TN path
-sys.path.append('/home/mila/f/farzaneh.heidari/scratch/tenis/TN_shapley')
 
 try:
-    from tntree_model import BinaryTensorTree
+    from src.tntree_model import BinaryTensorTree
     TN_AVAILABLE = True
     print("✅ BinaryTensorTree imported successfully")
 except ImportError as e:

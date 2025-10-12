@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 import math
 from typing import Tuple, List
 import torch
@@ -6,8 +7,8 @@ import torch.nn as nn
 import torch.optim as optim
 
 # ---- import your model ----
-# from tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
-from tntree_model import BinaryTensorTree
+# from src.tntree_model import BinaryTensorTree, make_balanced_binary_tensor_tree
+from src.tntree_model import BinaryTensorTree
 
 # ---------- Settings ----------
 torch.set_default_dtype(torch.float64)
