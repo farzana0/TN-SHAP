@@ -111,7 +111,7 @@ def main():
         print("\n🎉 All tests passed! Repository setup is correct.")
         print("\n📚 Next steps:")
         print("  1. Activate environment: conda activate tnshap")
-        print("  2. Run experiments: cd experiments/01_feature_maps")
+        print("  2. Run experiments: cd experiments/UCI")
         print("  3. Test imports: python test_imports.py")
         return 0
     else:

@@ -97,10 +97,10 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
 
-### 1. Diabetes Dataset Experiment
+### 1. UCI Dataset Experiment
 
 ```bash
-cd experiments/01_feature_maps
+cd experiments/UCI
 
 # Train a surrogate model
 python scripts/build_local_student_singlegrid.py \

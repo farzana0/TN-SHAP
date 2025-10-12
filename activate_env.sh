@@ -16,7 +16,7 @@ if command -v conda &> /dev/null; then
         echo ""
         echo "📚 Quick commands:"
         echo "  python test_imports.py          # Test installation"
-        echo "  cd experiments/01_feature_maps  # Run experiments"
+        echo "  cd experiments/UCI              # Run experiments"
         echo "  jupyter notebook notebooks/     # Open notebooks"
         echo ""
         echo "🔧 To deactivate: conda deactivate"

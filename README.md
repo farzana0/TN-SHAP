@@ -29,7 +29,7 @@ tenis-clean/
 │   ├── feature_mapped_tn.py         # Feature mapping utilities
 │   └── utils/                        # Shared utilities
 ├── experiments/                      # All experiments organized by topic
-│   ├── 01_feature_maps/             # Real-world dataset experiments
+│   ├── UCI/                         # UCI dataset experiments
 │   ├── 02_higher_order_ablations/   # Feature map size ablations
 │   ├── 03_synthetic_experiments/    # Synthetic function validation
 │   └── 04_scaling/                  # High-dimensional scaling studies
@@ -117,8 +117,8 @@ python scripts/teacher_student_rank_sweep.py --seed 42
 
 ## 🧪 Experiments
 
-### 1. Feature Maps (Real-World Datasets)
-- **Location**: `experiments/01_feature_maps/`
+### 1. UCI Dataset Experiments
+- **Location**: `experiments/UCI/`
 - **Purpose**: Evaluate TNShap on UCI datasets (Diabetes, Concrete, Energy, California Housing)
 - **Key Results**: TNShap achieves comparable accuracy with 5-50x speedup
 
