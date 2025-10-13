@@ -473,7 +473,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", required=True, choices=["concrete","energy_y1","energy_y2","diabetes","california"])
     ap.add_argument("--seed", type=int, default=2711)
-    ap.add_argument("--masked-root", required=True, help="Folder produced by build_local_student_singlegrid.py")
+    ap.add_argument("--masked-root", required=True, help="Folder produced by train_feature_map_models.py")
     ap.add_argument("--orders", type=int, nargs="+", default=[1,2,3])
     ap.add_argument("--outdir", type=str, required=True)
 

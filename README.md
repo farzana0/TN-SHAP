@@ -24,10 +24,12 @@ TNShap is a method for computing Shapley values and higher-order feature interac
 
 ```
 tenis-clean/
+├── demo_tnshap.py                   # Quick start demo script
 ├── src/                              # Core TNShap implementation
 │   ├── tntree_model.py              # Binary tensor tree architecture
 │   ├── feature_mapped_tn.py         # Feature mapping utilities
 │   └── utils/                        # Shared utilities
+│       └── shapley_computation.py   # Shapley value computation functions
 ├── experiments/                      # All experiments organized by topic
 │   ├── UCI/                         # UCI dataset experiments
 │   ├── 02_higher_order_ablations/   # Feature map size ablations
@@ -70,11 +72,27 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+### Quick Demo
+
+```bash
+# Run the interactive demo
+python demo_tnshap.py
+```
+
+This demo shows TNShap in action on both synthetic functions and real data (Diabetes dataset), demonstrating:
+- Training tensor network surrogate models
+- Computing Shapley values with TNShap
+- Comparing with exact Shapley values (synthetic case)
+- Feature importance analysis
+
+**Note**: The demo requires the full environment setup. If you encounter issues, try running the individual experiment scripts in the `experiments/` directory.
+
 ### Basic Usage
 
 ```python
 import torch
 from src import make_feature_mapped_tn
+from src.utils import compute_shapley_values_tnshap
 
 # Create a feature-mapped tensor network
 model = make_feature_mapped_tn(
@@ -90,6 +108,11 @@ X = torch.randn(100, 10)
 # Forward pass
 predictions = model(X)
 print(f"Predictions shape: {predictions.shape}")
+
+# Compute Shapley values for a test point
+test_point = torch.randn(1, 10)
+shapley_values = compute_shapley_values_tnshap(model, test_point)
+print(f"Shapley values: {shapley_values}")
 ```
 
 ### Running Experiments
@@ -97,15 +120,15 @@ print(f"Predictions shape: {predictions.shape}")
 ```bash
 # Run diabetes dataset experiment
 cd experiments/UCI
-python scripts/eval_local_student_k123.py --dataset diabetes --orders 1 2 3
+python scripts/uci_evaluate_tnshap_vs_baselines.py --dataset diabetes --orders 1 2 3
 
 # Run scaling experiment
 cd experiments/04_scaling
-bash scripts/run_sweep.sh
+bash scripts/scaling_run_all_experiments.sh
 
 # Run synthetic validation
 cd experiments/03_synthetic_experiments
-python scripts/teacher_student_rank_sweep.py --seed 42
+python scripts/synthetic_rank_sweep_basic.py --seed 42
 ```
 
 ## 📚 Documentation
@@ -114,6 +137,7 @@ python scripts/teacher_student_rank_sweep.py --seed 42
 - **[Quick Start Guide](docs/quickstart.md)** - Step-by-step tutorial
 - **[Methodology](docs/methodology.md)** - Technical details and theory
 - **[API Reference](docs/api.md)** - Complete API documentation
+- **[Demo Script](demo_tnshap.py)** - Interactive demonstration of core functionality
 
 ## 🧪 Experiments
 

@@ -12,4 +12,6 @@ REPO_ROOT = Path(__file__).parent.parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-__all__ = ["REPO_ROOT"]
+from .shapley_computation import compute_shapley_values_tnshap, compute_shapley_values_sampling
+
+__all__ = ["REPO_ROOT", "compute_shapley_values_tnshap", "compute_shapley_values_sampling"]

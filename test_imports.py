@@ -81,9 +81,9 @@ def test_experiment_imports():
     
     # Test a few key experiment scripts
     experiment_scripts = [
-        "experiments/UCI/scripts/eval_local_student_k123.py",
-        "experiments/03_synthetic_experiments/scripts/teacher_student_rank_sweep.py",
-        "experiments/04_scaling/scripts/simple_tn_shapley_example.py"
+        "experiments/UCI/scripts/uci_evaluate_tnshap_vs_baselines.py",
+        "experiments/03_synthetic_experiments/scripts/synthetic_rank_sweep_basic.py",
+        "experiments/04_scaling/scripts/scaling_simple_example.py"
     ]
     
     for script in experiment_scripts:
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         print("\n✅ All tests passed! You can now run experiments.")
         print("\n📚 Next steps:")
         print("  1. cd experiments/UCI")
-        print("  2. python scripts/eval_local_student_k123.py --help")
+        print("  2. python scripts/uci_evaluate_tnshap_vs_baselines.py --help")
         print("  3. Check out the notebooks: jupyter notebook notebooks/")
         sys.exit(0)
     else:

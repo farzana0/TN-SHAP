@@ -13,19 +13,19 @@ The synthetic experiments provide controlled validation of TNShap by:
 ## Key Scripts
 
 ### Main Experiment Scripts
-- `teacher_student_rank_sweep.py` - Basic rank sweep experiments
-- `teacher_student_rank_sweep_multi_seed.py` - Multi-seed robustness study
-- `teacher_student_rank_sweep_enhanced.py` - Enhanced experiments with more metrics
-- `synthetic_experiment.py` - Core synthetic experiment framework
+- `synthetic_rank_sweep_basic.py` - Basic rank sweep experiments
+- `synthetic_rank_sweep_multi_seed.py` - Multi-seed robustness study
+- `synthetic_rank_sweep_enhanced.py` - Enhanced experiments with more metrics
+- `synthetic_validation_framework.py` - Core synthetic experiment framework
 
 ### Analysis Scripts
-- `focused_synthetic_exp.py` - Focused experiments on specific configurations
-- `multilinear_ablation_rank_loss.py` - Rank and loss function ablations
-- `run_multilinear_tn_shap_all_orders.py` - Comprehensive order evaluation
-- `make_figs_and_tables.py` - Generate publication figures and tables
+- `synthetic_focused_experiments.py` - Focused experiments on specific configurations
+- `synthetic_rank_loss_ablation.py` - Rank and loss function ablations
+- `synthetic_evaluate_all_orders.py` - Comprehensive order evaluation
+- `synthetic_generate_figures.py` - Generate publication figures and tables
 
 ### Suite Scripts
-- `run_synth_tnshap_suite.py` - Run complete synthetic experiment suite
+- `synthetic_experiment_suite.py` - Run complete synthetic experiment suite
 
 ## Experimental Design
 
@@ -67,25 +67,25 @@ The synthetic experiments provide controlled validation of TNShap by:
 ### Quick Start
 ```bash
 # Run basic rank sweep
-python scripts/teacher_student_rank_sweep.py --seed 42
+python scripts/synthetic_rank_sweep_basic.py --seed 42
 
 # Run multi-seed study
-python scripts/teacher_student_rank_sweep_multi_seed.py --n_seeds 10
+python scripts/synthetic_rank_sweep_multi_seed.py --n_seeds 10
 
 # Run complete suite
-python scripts/run_synth_tnshap_suite.py
+python scripts/synthetic_experiment_suite.py
 ```
 
 ### Custom Experiments
 ```bash
 # Test specific ranks
-python scripts/synthetic_experiment.py \
+python scripts/synthetic_validation_framework.py \
     --ranks 2 4 6 8 \
     --function_type generic_multilinear \
     --seed 42
 
 # Focused experiment
-python scripts/focused_synthetic_exp.py \
+python scripts/synthetic_focused_experiments.py \
     --rank 6 \
     --function_type tensor_tree \
     --n_test_points 50
@@ -94,7 +94,7 @@ python scripts/focused_synthetic_exp.py \
 ### Generate Figures
 ```bash
 # Create publication figures
-python scripts/make_figs_and_tables.py
+python scripts/synthetic_generate_figures.py
 
 # Generate specific plots
 python scripts/plot_tn_entanglement.py

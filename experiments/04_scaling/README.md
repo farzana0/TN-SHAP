@@ -13,19 +13,19 @@ The scaling experiments evaluate TNShap's ability to handle large feature spaces
 ## Key Scripts
 
 ### Main Scaling Scripts
-- `run_d_sweep_gpu.py` - Main dimension sweep experiment
-- `student_vs_generator.py` - TN training and SHAPIQ comparison
-- `run_sweep.sh` - Complete scaling experiment orchestrator
+- `scaling_dimension_sweep.py` - Main dimension sweep experiment
+- `scaling_tn_vs_baselines.py` - TN training and SHAPIQ comparison
+- `scaling_run_all_experiments.sh` - Complete scaling experiment orchestrator
 
 ### Training Scripts
-- `train_tn_clean.py` - Clean tensor network training
-- `train_tn_from_generic_multilinear.py` - Train from multilinear functions
-- `train_tn_student_from_teacher.py` - Teacher-student training
+- `scaling_train_tensor_network.py` - Clean tensor network training
+- `scaling_train_from_multilinear.py` - Train from multilinear functions
+- `scaling_train_teacher_student.py` - Teacher-student training
 
 ### Example Scripts
-- `simple_tn_shapley_example.py` - Basic TNShap demonstration
-- `comprehensive_tn_shapley_example.py` - Full example with analysis
-- `summarize_results.py` - Generate scaling result summaries
+- `scaling_simple_example.py` - Basic TNShap demonstration
+- `scaling_comprehensive_example.py` - Full example with analysis
+- `scaling_summarize_results.py` - Generate scaling result summaries
 
 ## Experimental Design
 
@@ -73,25 +73,25 @@ The scaling experiments evaluate TNShap's ability to handle large feature spaces
 ### Quick Start
 ```bash
 # Run complete scaling sweep
-bash scripts/run_sweep.sh
+bash scripts/scaling_run_all_experiments.sh
 
 # Run specific dimension
-python scripts/run_d_sweep_gpu.py --dimensions 20 30 40
+python scripts/scaling_dimension_sweep.py --dimensions 20 30 40
 
 # Simple example
-python scripts/simple_tn_shapley_example.py
+python scripts/scaling_simple_example.py
 ```
 
 ### Custom Scaling
 ```bash
 # Test specific dimensions
-python scripts/student_vs_generator.py \
+python scripts/scaling_tn_vs_baselines.py \
     --dimensions 10 20 30 \
     --ranks 4 6 8 \
     --seed 42
 
 # Train custom model
-python scripts/train_tn_clean.py \
+python scripts/scaling_train_tensor_network.py \
     --dimension 50 \
     --rank 8 \
     --epochs 200
@@ -100,10 +100,10 @@ python scripts/train_tn_clean.py \
 ### Generate Summaries
 ```bash
 # Create result summaries
-python scripts/summarize_results.py
+python scripts/scaling_summarize_results.py
 
 # Comprehensive analysis
-python scripts/comprehensive_tn_shapley_example.py
+python scripts/scaling_comprehensive_example.py
 ```
 
 ## Results Structure

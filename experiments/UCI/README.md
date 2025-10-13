@@ -13,13 +13,13 @@ The feature maps experiments demonstrate TNShap's effectiveness on real datasets
 ## Key Scripts
 
 ### Training Scripts
-- `build_local_student_singlegrid.py` - Train tensor network surrogate models
-- `diabetes_budget_sweep.py` - Comprehensive budget sweep experiments
+- `uci_train_surrogate_models.py` - Train tensor network surrogate models
+- `uci_diabetes_budget_sweep.py` - Comprehensive budget sweep experiments
 
 ### Evaluation Scripts  
-- `eval_local_student_k123.py` - Main evaluation script for TNShap vs baselines
-- `aggregate_local_eval.py` - Aggregate results across multiple runs
-- `create_comprehensive_table.py` - Generate publication-ready result tables
+- `uci_evaluate_tnshap_vs_baselines.py` - Main evaluation script for TNShap vs baselines
+- `uci_aggregate_results.py` - Aggregate results across multiple runs
+- `uci_create_results_table.py` - Generate publication-ready result tables
 
 ## Datasets
 
@@ -46,13 +46,13 @@ The feature maps experiments demonstrate TNShap's effectiveness on real datasets
 ### Quick Start
 ```bash
 # Train surrogate models
-python scripts/build_local_student_singlegrid.py --dataset diabetes --seed 2711
+python scripts/uci_train_surrogate_models.py --dataset diabetes --seed 2711
 
 # Evaluate TNShap vs baselines
-python scripts/eval_local_student_k123.py --dataset diabetes --orders 1 2 3 --with-baselines
+python scripts/uci_evaluate_tnshap_vs_baselines.py --dataset diabetes --orders 1 2 3 --with-baselines
 
 # Run budget sweep
-python scripts/diabetes_budget_sweep.py --orders 1 2 3 --repeats 3
+python scripts/uci_diabetes_budget_sweep.py --orders 1 2 3 --repeats 3
 ```
 
 ### Full Pipeline
@@ -64,8 +64,8 @@ bash scripts/run_build_data.sh
 python scripts/run_all_pretrained_eval.py
 
 # 3. Aggregate and create tables
-python scripts/aggregate_local_eval.py
-python scripts/create_comprehensive_table.py
+python scripts/uci_aggregate_results.py
+python scripts/uci_create_results_table.py
 ```
 
 ## Results Structure

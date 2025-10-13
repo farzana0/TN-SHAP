@@ -13,13 +13,13 @@ The higher-order ablations experiment investigates:
 ## Key Scripts
 
 ### Ablation Scripts
-- `ablate_fmap_and_eval.py` - Main ablation study script
-- `baseline_no_fmap_and_eval.py` - Baseline without feature maps
-- `summarize_ablation.py` - Generate ablation summary tables
+- `feature_map_ablation_study.py` - Main ablation study script
+- `baseline_no_feature_maps.py` - Baseline without feature maps
+- `summarize_feature_map_results.py` - Generate ablation summary tables
 
 ### Training Scripts
-- `build_local_student_singlegrid.py` - Train models with different feature map sizes
-- `eval_local_student_k123.py` - Evaluate models across interaction orders
+- `train_feature_map_models.py` - Train models with different feature map sizes
+- `evaluate_feature_map_models.py` - Evaluate models across interaction orders
 
 ## Experimental Design
 
@@ -57,25 +57,25 @@ The higher-order ablations experiment investigates:
 ### Run Ablation Study
 ```bash
 # Run complete ablation study
-python scripts/ablate_fmap_and_eval.py --dataset diabetes --seed 2711
+python scripts/feature_map_ablation_study.py --dataset diabetes --seed 2711
 
 # Run baseline (no feature maps)
-python scripts/baseline_no_fmap_and_eval.py --dataset diabetes --seed 2711
+python scripts/baseline_no_feature_maps.py --dataset diabetes --seed 2711
 
 # Generate summary tables
-python scripts/summarize_ablation.py
+python scripts/summarize_feature_map_results.py
 ```
 
 ### Custom Ablation
 ```bash
 # Test specific feature map sizes
-python scripts/build_local_student_singlegrid.py \
+python scripts/train_feature_map_models.py \
     --dataset diabetes \
     --fmap_sizes 1 2 4 8 \
     --seed 2711
 
 # Evaluate specific orders
-python scripts/eval_local_student_k123.py \
+python scripts/evaluate_feature_map_models.py \
     --dataset diabetes \
     --orders 1 2 3 \
     --fmap_size 8

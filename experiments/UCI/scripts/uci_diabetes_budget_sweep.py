@@ -6,7 +6,7 @@ Diabetes TNShap vs Baselines Sampling Budget Sweep
 Uses pre-trained models from out_local_student_singlegrid/diabetes_seed2711_K89_m10/
 Compares TNShap against baselines with sampling budgets: 50,100,500,1000,2000,10000
 
-This script leverages eval_local_student_k123.py to run comprehensive comparisons
+This script leverages uci_evaluate_tnshap_vs_baselines.py to run comprehensive comparisons
 across multiple orders and sampling budgets.
 """
 
@@ -101,10 +101,10 @@ def run_eval_script(
     shapiq_budgets: List[int],
     repeats: int = 3
 ) -> str:
-    """Run the eval_local_student_k123.py script with specified parameters."""
+    """Run the uci_evaluate_tnshap_vs_baselines.py script with specified parameters."""
     
     cmd = [
-        "python", "eval_local_student_k123.py",
+        "python", "uci_evaluate_tnshap_vs_baselines.py",
         "--dataset", dataset,
         "--seed", str(seed),
         "--masked-root", masked_root,

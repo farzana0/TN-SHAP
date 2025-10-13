@@ -103,12 +103,12 @@ venv\Scripts\activate     # Windows
 cd experiments/UCI
 
 # Train a surrogate model
-python scripts/build_local_student_singlegrid.py \
+python scripts/uci_train_surrogate_models.py \
     --dataset diabetes \
     --seed 2711
 
 # Evaluate TNShap vs baselines
-python scripts/eval_local_student_k123.py \
+python scripts/uci_evaluate_tnshap_vs_baselines.py \
     --dataset diabetes \
     --orders 1 2 3 \
     --with-baselines
@@ -120,12 +120,12 @@ python scripts/eval_local_student_k123.py \
 cd experiments/03_synthetic_experiments
 
 # Run rank sweep experiment
-python scripts/teacher_student_rank_sweep.py \
+python scripts/synthetic_rank_sweep_basic.py \
     --ranks 2 4 6 8 \
     --seed 42
 
 # Multi-seed robustness study
-python scripts/teacher_student_rank_sweep_multi_seed.py \
+python scripts/synthetic_rank_sweep_multi_seed.py \
     --n_seeds 10
 ```
 
@@ -135,11 +135,11 @@ python scripts/teacher_student_rank_sweep_multi_seed.py \
 cd experiments/04_scaling
 
 # Run dimension sweep
-python scripts/run_d_sweep_gpu.py \
+python scripts/scaling_dimension_sweep.py \
     --dimensions 10 20 30 40
 
 # Simple example
-python scripts/simple_tn_shapley_example.py
+python scripts/scaling_simple_example.py
 ```
 
 ## Understanding the Results
