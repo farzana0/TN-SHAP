@@ -194,54 +194,9 @@ python scripts/synthetic_rank_sweep_basic.py --seed 42
 - **d=50**: R² = 0.811 (SHAPIQ), R² = 0.75 (TNShap)
 - **d=60**: Experiments in progress
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -e ".[dev]"
-
-# Run tests
-pytest
-
-# Format code
-black src/ experiments/
-
-# Lint code
-flake8 src/ experiments/
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📚 Citation
-
-If you use TNShap in your research, please cite our paper:
-
-```bibtex
-@article{tnshap2024,
-  title={TNShap: Tensor Network Shapley Value Estimation},
-  author={Your Name and Collaborators},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
-}
-```
-
-## 🙏 Acknowledgments
-
-- Thanks to the PyTorch team for the excellent deep learning framework
-- Thanks to the SHAPIQ authors for providing baseline implementations
-- Thanks to the research community for computational resources and support
-
-## 📞 Contact
-
-- **Issues**: [GitHub Issues](https://github.com/your-org/tnshap/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-org/tnshap/discussions)
-- **Email**: your.email@example.com
 
 ---
 
