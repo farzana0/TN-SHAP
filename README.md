@@ -211,7 +211,7 @@ If you use TNShap in your research, please cite our paper:
 
 - Thanks to the PyTorch team for the excellent deep learning framework
 - Thanks to the SHAPIQ authors for providing baseline implementations
-- Thanks to the Mila community for computational resources and support
+- Thanks to the research community for computational resources and support
 
 ## 📞 Contact
 
