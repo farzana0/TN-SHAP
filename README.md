@@ -96,7 +96,7 @@ print(f"Predictions shape: {predictions.shape}")
 
 ```bash
 # Run diabetes dataset experiment
-cd experiments/01_feature_maps
+cd experiments/UCI
 python scripts/eval_local_student_k123.py --dataset diabetes --orders 1 2 3
 
 # Run scaling experiment

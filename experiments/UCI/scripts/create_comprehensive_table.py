@@ -151,7 +151,7 @@ def main():
     """Main function to create comprehensive analysis."""
     
     # Load the aggregated summary
-    data_path = "/home/mila/f/farzaneh.heidari/scratch/tenis/feature_map/diabetes_budget_sweep_results/diabetes_seed2711/diabetes_agg_summary.csv"
+    data_path = "results/diabetes_budget_sweep_results/diabetes_seed2711/diabetes_agg_summary.csv"
     
     print("Loading aggregated diabetes results...")
     df = pd.read_csv(data_path)
@@ -176,7 +176,7 @@ def main():
     print(latex_table)
     
     # Save results
-    output_dir = Path("/home/mila/f/farzaneh.heidari/scratch/tenis/feature_map/diabetes_budget_sweep_results/diabetes_seed2711")
+    output_dir = Path("results/diabetes_budget_sweep_results/diabetes_seed2711")
     
     # Save LaTeX table
     with open(output_dir / "comprehensive_baseline_table.tex", "w") as f:

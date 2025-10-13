@@ -4,7 +4,7 @@ import sys; import os; sys.path.insert(0, os.path.join(os.path.dirname(__file__)
 Baseline Sweep Experiment on Pre-trained Diabetes Models
 
 Loads pre-trained teacher and student models from:
-feature_map/out_local_student_singlegrid/diabetes_seed2711_K89_m10/
+experiments/UCI/out_local_student_singlegrid/diabetes_seed2711_K89_m10/
 
 Runs baseline comparisons with budget sweep: 50,100,200,500,1000,1500,2000,10000
 Compares against TNShap (computed once) measuring runtime, MSE, and cosine similarity.
@@ -502,7 +502,7 @@ def run_baseline_sweep_experiment(model_dir: str):
 def main():
     """Run the baseline sweep experiment on diabetes dataset."""
     
-    model_dir = "/home/mila/f/farzaneh.heidari/scratch/tenis/feature_map/out_local_student_singlegrid/diabetes_seed2711_K89_m10"
+    model_dir = "experiments/UCI/out_local_student_singlegrid/diabetes_seed2711_K89_m10"
     
     print(f"{'='*80}")
     print("BASELINE SWEEP EXPERIMENT - DIABETES DATASET")

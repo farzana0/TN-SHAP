@@ -32,7 +32,7 @@ def test_imports_from_experiment_dir():
     
     # Simulate being in an experiment directory
     repo_root = Path(__file__).parent
-    experiment_dir = repo_root / "experiments" / "01_feature_maps" / "scripts"
+    experiment_dir = repo_root / "experiments" / "UCI" / "scripts"
     
     # Add repository root to path (3 levels up from experiment scripts)
     if str(repo_root) not in sys.path:
