@@ -1,0 +1,164 @@
+{
+  "sentence_1": {
+    "sentence": "The food was cheap, fresh, and tasty.",
+    "n_tokens": 10,
+    "token_strings": [
+      "The",
+      " food",
+      " was",
+      " cheap",
+      ",",
+      " fresh",
+      ",",
+      " and",
+      " tasty",
+      "."
+    ],
+    "embed_dim": 768,
+    "orders": {
+      "0": {
+        "n_subsets": 1,
+        "total_samples": 6,
+        "target_prob_mean": 5.929472877141961e-07,
+        "target_prob_std": 0.0,
+        "target_logit_mean": -83.24019622802734,
+        "target_logit_std": 0.0
+      },
+      "1": {
+        "n_subsets": 10,
+        "total_samples": 60,
+        "target_prob_mean": 2.3265715935849584e-05,
+        "target_prob_std": 5.5619697354582565e-05,
+        "target_logit_mean": -74.57460174560546,
+        "target_logit_std": 7.8760826380943545
+      },
+      "2": {
+        "n_subsets": 45,
+        "total_samples": 270,
+        "target_prob_mean": 8.537995566434296e-05,
+        "target_prob_std": 0.00018658022868852994,
+        "target_logit_mean": -66.90793635050456,
+        "target_logit_std": 7.208628875853248
+      }
+    }
+  },
+  "sentence_2": {
+    "sentence": "The test was easy and simple.",
+    "n_tokens": 7,
+    "token_strings": [
+      "The",
+      " test",
+      " was",
+      " easy",
+      " and",
+      " simple",
+      "."
+    ],
+    "embed_dim": 768,
+    "orders": {
+      "0": {
+        "n_subsets": 1,
+        "total_samples": 6,
+        "target_prob_mean": 8.640535043014097e-07,
+        "target_prob_std": 0.0,
+        "target_logit_mean": -79.63445281982422,
+        "target_logit_std": 0.0
+      },
+      "1": {
+        "n_subsets": 7,
+        "total_samples": 42,
+        "target_prob_mean": 1.720459077400197e-05,
+        "target_prob_std": 2.0583072695789647e-05,
+        "target_logit_mean": -66.68798719133649,
+        "target_logit_std": 10.270970389581972
+      },
+      "2": {
+        "n_subsets": 21,
+        "total_samples": 126,
+        "target_prob_mean": 7.019492189404748e-05,
+        "target_prob_std": 0.00011251857605356289,
+        "target_logit_mean": -58.18835739862351,
+        "target_logit_std": 10.668352194865967
+      }
+    }
+  },
+  "sentence_3": {
+    "sentence": "The product is not very reliable.",
+    "n_tokens": 7,
+    "token_strings": [
+      "The",
+      " product",
+      " is",
+      " not",
+      " very",
+      " reliable",
+      "."
+    ],
+    "embed_dim": 768,
+    "orders": {
+      "0": {
+        "n_subsets": 1,
+        "total_samples": 6,
+        "target_prob_mean": 2.565877593951882e-06,
+        "target_prob_std": 0.0,
+        "target_logit_mean": -75.68952941894531,
+        "target_logit_std": 0.0
+      },
+      "1": {
+        "n_subsets": 7,
+        "total_samples": 42,
+        "target_prob_mean": 3.323202577121265e-05,
+        "target_prob_std": 4.081589133080148e-05,
+        "target_logit_mean": -69.72469111851284,
+        "target_logit_std": 6.106148301476049
+      },
+      "2": {
+        "n_subsets": 21,
+        "total_samples": 126,
+        "target_prob_mean": 0.00010205592869689488,
+        "target_prob_std": 0.00015278263798174655,
+        "target_logit_mean": -63.51198487054734,
+        "target_logit_std": 6.752254400825343
+      }
+    }
+  },
+  "sentence_4": {
+    "sentence": "Great, just what I needed",
+    "n_tokens": 6,
+    "token_strings": [
+      "Great",
+      ",",
+      " just",
+      " what",
+      " I",
+      " needed"
+    ],
+    "embed_dim": 768,
+    "orders": {
+      "0": {
+        "n_subsets": 1,
+        "total_samples": 6,
+        "target_prob_mean": 1.1775440725614317e-05,
+        "target_prob_std": 0.0,
+        "target_logit_mean": -58.422637939453125,
+        "target_logit_std": 0.0
+      },
+      "1": {
+        "n_subsets": 6,
+        "total_samples": 36,
+        "target_prob_mean": 8.464550887765654e-05,
+        "target_prob_std": 8.92090207061224e-05,
+        "target_logit_mean": -50.20775604248047,
+        "target_logit_std": 7.998604527507185
+      },
+      "2": {
+        "n_subsets": 15,
+        "total_samples": 90,
+        "target_prob_mean": 0.0001533485895076107,
+        "target_prob_std": 0.00013902606863496964,
+        "target_logit_mean": -50.391501871744794,
+        "target_logit_std": 8.820336234324117
+      }
+    }
+  }
+}
