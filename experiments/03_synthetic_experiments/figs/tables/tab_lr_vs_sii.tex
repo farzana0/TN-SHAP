@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{rcccccc}
+\toprule
+LR & Epoch & MSE & Train $R^2$ & SII $R^2$ (o1) & SII $R^2$ (o2) & SII $R^2$ (o3) \\
+\midrule
+1e-04 & 80 & 3.248e+02 & 0.012 & -0.962 & -0.100 & 0.020 \\
+3e-04 & 80 & 3.918e+01 & 0.812 & 0.583 & 0.912 & 0.062 \\
+1e-03 & 80 & 1.467e+01 & 0.946 & 0.956 & 0.877 & 0.882 \\
+3e-03 & 80 & 2.793e+00 & 0.988 & 0.869 & 0.968 & 0.974 \\
+1e-02 & 80 & 8.021e-01 & 0.997 & 0.999 & 0.999 & 0.999 \\
+\bottomrule
+\end{tabular}
+\caption{Loss/R$^2$ vs SII $R^2$ (final epoch per learning rate) for generic multilinear.}
+\label{tab:lr-vs-sii}
+\end{table}

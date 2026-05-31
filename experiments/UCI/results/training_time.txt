@@ -1,0 +1,1 @@
+[TN] done in 9.63s  final_mse=1.5925e-03  final_R2=0.9888

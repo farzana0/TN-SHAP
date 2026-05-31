@@ -1,0 +1,34 @@
+# Python bytecode / caches
+**/__pycache__/
+*.py[cod]
+**/.ipynb_checkpoints/
+.pytest_cache/
+
+# Build / install artifacts
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Trained models, tensors, and scalers
+*.pt
+*.pth
+*.pkl
+*.npz
+*.npy
+
+# Generated experiment outputs
+logs/
+logs-*/
+logs_*/
+outputs/
+*.log
+
+# Generated result tables/dumps (keep scripts, not their output)
+results.txt
+*_summary_auto.txt
+*_summary.tsv
+
+# OS / editor cruft
+.DS_Store
+*.swp
