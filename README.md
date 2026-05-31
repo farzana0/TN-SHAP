@@ -44,7 +44,7 @@ TN-SHAP/
 ├── figures/                           # Result figures reproduced from the paper (PNG/PDF)
 ├── docs/                              # Installation / quick-start / methodology notes
 ├── tests/                             # Correctness tests (t=1 oracle, etc.)
-└── gpt_explain/                       # Exploratory LLM token-attribution application (not in paper)
+└── gpt_explain/                       # LLM token-attribution application of TN-SHAP
 ```
 
 ---
@@ -127,18 +127,26 @@ LaTeX sources are included):
 - `fig4_training_dynamics.png` — R² vs. epoch for the student fit and SII orders (Figure 4)
 - `fig5_rank_ablation_heatmap.png` — safe-R² across student ranks, GT TN rank 14 (Figure 5)
 
+**Figure 4 — Training dynamics.** Lower-order interactions stabilize early while
+higher orders keep improving:
+
+![Training dynamics: R² vs. epoch for the student fit and SII orders k=1,2,3](figures/fig4_training_dynamics.png)
+
+**Figure 5 — Rank ablation.** safe-R² across student ranks against a ground-truth
+TN of rank 14; recovery saturates once the student rank exceeds the GT rank:
+
+![Rank-ablation heatmap: safe-R² for student ranks under a GT TN of rank 14](figures/fig5_rank_ablation_heatmap.png)
+
 ---
 
-## `gpt_explain/` (exploratory, not part of the paper)
+## `gpt_explain/`
 
-`gpt_explain/` is an **exploratory application** of the TN-SHAP machinery to
-LLM token attribution: it lifts DistilGPT-2 token embeddings, fits a
-tensor-network surrogate over a token sentence, and computes Shapley
-interactions over tokens. It is **not** part of the AISTATS paper's claims or
-experiments and is included only as a worked example of applying TN surrogates
-beyond tabular data. Only the code (scripts + README) is shipped here; the large
-generated datasets, embeddings, plots, and checkpoints are omitted — see
-`gpt_explain/README.md` for how to regenerate them.
+`gpt_explain/` applies the TN-SHAP machinery to LLM token attribution: it lifts
+DistilGPT-2 token embeddings, fits a tensor-network surrogate over a token
+sentence, and computes Shapley interactions over tokens — a worked example of
+applying TN surrogates beyond tabular data. Only the code (scripts + README) is
+shipped here; the large generated datasets, embeddings, plots, and checkpoints
+are omitted — see `gpt_explain/README.md` for how to regenerate them.
 
 ## Acknowledgements
 
