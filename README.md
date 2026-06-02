@@ -158,3 +158,25 @@ with the original license preserved at `experiments/05_highdim_scaling/LICENSE`.
 ## License
 
 This project is released under the MIT License — see [LICENSE](LICENSE).
+
+## Citation
+
+If you use TN-SHAP in your research, please cite:
+
+> **Tractable Shapley Values and Interactions via Tensor Networks**
+> Farzaneh Heidari, Chao Li, Guillaume Rabusseau.
+> *Proceedings of the 29th International Conference on Artificial Intelligence and Statistics (AISTATS), 2026.*
+> arXiv:2510.22138 — <https://arxiv.org/abs/2510.22138>
+
+```bibtex
+@inproceedings{heidari2026tnshap,
+  title         = {Tractable Shapley Values and Interactions via Tensor Networks},
+  author        = {Heidari, Farzaneh and Li, Chao and Rabusseau, Guillaume},
+  booktitle     = {Proceedings of the 29th International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year          = {2026},
+  eprint        = {2510.22138},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2510.22138}
+}
+```
